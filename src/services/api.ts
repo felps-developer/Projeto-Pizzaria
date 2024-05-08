@@ -7,7 +7,7 @@ import { signOut } from "@/contexts/AuthContext";
 const setupAPIClient = (ctx = undefined) => {
     let cookies = parseCookies(ctx);
     const api = axios.create({
-        baseURL: 'http://localhost:3500',
+        baseURL: 'https://projeto-pizzaria-ten.vercel.app',
         headers: {
             Authorization: `Bearer ${cookies['@nextauth.token']}`
         }
